@@ -4,65 +4,143 @@
     <meta charset="utf-8"/>
     <meta name="viewport" width="device-width, initial-scale=1.0"/>
     <style>
-      .mgvPage {
-        margin: 0;
-      }
+/* #region html ============================================================ */
+html {
+  /*
+   * overscroll-behavior:auto seems to add the html background-image as it is
+   * before and after the document. Hence we have to "flip" the
+   * background-image to have the footer background color at the top and the
+   * header background image at the bottom.
+   */
+  background-image: linear-gradient(var(--mgv-page-footer-background) 50%, var(--mgv-page-header-background) 50%);
+}
+/* #endregion */
+/* #region :root =========================================================== */
+:root {
+  --mgv-blue: #13437d;
+  --mgv-grey: #8e9394;
+  --mgv-black: #050505;
 
-      .mgvView {
-        --display: flex;
+  --mgv-gap: 1rem;
 
-        display: var(--display);
-        flex-direction: column;
+  --mgv-page-header-background: var(--mgv-section-background);
+  --mgv-page-footer-background: var(--mgv-blue);
 
-        & + .mgvView::before {
-          content: '';
-          margin: 2rem 0;
-          border-bottom: 2px dashed #000;
-        }
-      }
+  --mgv-section-horizontal-padding: 1rem;
+  --mgv-section-padding-top: 1rem;
+  --mgv-section-padding-bottom: 1rem;
+  --mgv-section-background: #ffffff;
 
-      .mgvPage--js {
-        .mgvView {
-          display: none;
+  @media (min-width: 48rem) { /* 768px / small tablet */
+    --mgv-section-horizontal-padding: 2rem;
+    --mgv-section-padding-bottom: 2rem;
+  }
 
-          &:target {
-            display: var(--display);
-          }
+  @media (min-width: 64rem) { /* 1024px / large tablet */
+    --mgv-section-horizontal-padding: 3rem;
+  }
 
-          & + .mgvView::before {
-            display: none;
-          }
-        }
-      }
+  @media (min-width: 75rem) { /* 1200px / desktop */
+    --mgv-section-horizontal-padding: 5rem;
+    --mgv-section-padding-top: 2rem;
+    --mgv-section-padding-bottom: 3rem;
+  }
+}
+/* #endregion */
+/* #region .mgvPage ======================================================== */
+.mgvPage {
+  margin: 0;
+}
+/* #endregion */
+/* #region .mgvView ======================================================== */
+.mgvView {
+  --display: flex;
+
+  display: var(--display);
+  flex-direction: column;
+
+  & + .mgvView::before {
+    content: '';
+    margin: 2rem 0;
+    border-bottom: 2px dashed #000;
+  }
+}
+
+.mgvPage--js {
+  .mgvView {
+    display: none;
+
+    &:target {
+      display: var(--display);
+    }
+
+    & + .mgvView::before {
+      display: none;
+    }
+  }
+}
+/* #endregion */
+/* #region .mgvSection ===================================================== */
+.mgvSection {
+  padding: var(--mgv-section-padding-top) var(--mgv-section-horizontal-padding) var(--mgv-section-padding-bottom);
+  color: white;
+  text-shadow: 0 0 .05em black, 0 0 .05em black, 0 0 .05em black, 0 0 .05em black;
+  background-color: var(--mgv-section-background);
+
+  @supports (color: oklch(from red l c h)) {
+    --l: clamp(0, (var(--l-threshold, .623) / l - 1) * infinity, 1);
+    color: oklch(from var(--mgv-section-background) var(--l) 0 h);
+    text-shadow: none;
+  }
+
+  @supports (color: color-contrast(red)) {
+    color: color-contrast(var(--mgv-section-background));
+    text-shadow: none;
+  }
+}
+
+.mgvSection--100vh {
+  height: 100vh;
+}
+/* #endregion */
+/* #region .mgvLink ======================================================== */
+.mgvLink {
+  color: inherit;
+}
+/* #endregion */
     </style>
   </head>
   <body id="page" class="mgvPage">
     <article class="mgvView" id="/">
-      <h1>MGV Eintracht Oberbrechen</h1>
-      <a href="#/imprint">Impressum</a>
+      <section class="mgvSection mgvSection--100vh">
+        <h1>MGV Eintracht Oberbrechen</h1>
+      </section>
+      <section class="mgvSection" style="--mgv-section-background: var(--mgv-page-footer-background)">
+        <a href="#/imprint" class="mgvLink">Impressum</a>
+      </section>
     </article>
     <article class="mgvView" id="/imprint">
-      <a href="#/">Home</a>
+      <a href="#/" class="mgvLink">Home</a>
       <h1>Impressum</h1>
     </article>
     <script>
-      // @ts-check
-      const pageRef = /** @type {HTMLBodyElement} */ (document.getElementById('page'));
-      pageRef.classList.add('mgvPage--js');
+// @ts-check
+const pageRef = /** @type {HTMLBodyElement} */ (document.getElementById('page'));
+pageRef.classList.add('mgvPage--js');
 
-      /** @type {Object<string, HTMLElement>} */
-      const viewRefs = Array.from(document.querySelectorAll('.mgvView[id]')).reduce((dict, ref) => ({...dict, [ref.id]: ref}), {});
-      /** */
-      function onHashchange() {
-        const route = location.hash.slice(1);
-        if (!(route in viewRefs)) {
-          location.hash = Object.keys(viewRefs)[0];
-        }
-      }
-      if (Object.keys(viewRefs).length > 0) {
-        window.addEventListener('hashchange', onHashchange);
-        onHashchange();
-      }
+/** @type {Object<string, HTMLElement>} */
+const viewRefs = Array.from(document.querySelectorAll('.mgvView[id]')).reduce((dict, ref) => ({...dict, [ref.id]: ref}), {});
+/** */
+function onHashchange() {
+  const route = location.hash.slice(1);
+  if (!(route in viewRefs)) {
+    location.hash = Object.keys(viewRefs)[0];
+  }
+}
+if (Object.keys(viewRefs).length > 0) {
+  window.addEventListener('hashchange', onHashchange);
+  onHashchange();
+}
     </script>
   </body>
 </html>
