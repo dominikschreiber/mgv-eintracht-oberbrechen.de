@@ -83,9 +83,10 @@ html {
 /* #region .mgvSection ===================================================== */
 .mgvSection {
   padding: var(--mgv-section-padding-top) var(--mgv-section-horizontal-padding) var(--mgv-section-padding-bottom);
+  background-color: var(--mgv-section-background);
+  /** @see https://lea.verou.me/blog/2024/contrast-color */
   color: white;
   text-shadow: 0 0 .05em black, 0 0 .05em black, 0 0 .05em black, 0 0 .05em black;
-  background-color: var(--mgv-section-background);
 
   @supports (color: oklch(from red l c h)) {
     --l: clamp(0, (var(--l-threshold, .623) / l - 1) * infinity, 1);
@@ -101,6 +102,12 @@ html {
 
 .mgvSection--100vh {
   height: 100vh;
+}
+/* #endregion */
+/* #region .mgvNav ========================================================= */
+.mgvNav {
+  padding: var(--mgv-gap) var(--mgv-section-horizontal-padding);
+  background-color: var(--mgv-section-background);
 }
 /* #endregion */
 /* #region .mgvLink ======================================================== */
@@ -120,8 +127,12 @@ html {
       </section>
     </article>
     <article class="mgvView" id="/imprint">
-      <a href="#/" class="mgvLink">Home</a>
-      <h1>Impressum</h1>
+      <nav class="mgvNav">
+        <a href="#/" class="mgvLink">Home</a>
+      </nav>
+      <section class="mgvSection mgvSection--100vh">
+        <h1>Impressum</h1>
+      </section>
     </article>
     <script>
 // @ts-check
