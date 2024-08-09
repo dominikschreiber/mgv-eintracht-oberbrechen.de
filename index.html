@@ -2,8 +2,67 @@
 <html>
   <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" width="device-width, initial-scale=1.0"/>
+    <style>
+      .mgvPage {
+        margin: 0;
+      }
+
+      .mgvView {
+        --display: flex;
+
+        display: var(--display);
+        flex-direction: column;
+
+        & + .mgvView::before {
+          content: '';
+          margin: 2rem 0;
+          border-bottom: 2px dashed #000;
+        }
+      }
+
+      .mgvPage--js {
+        .mgvView {
+          display: none;
+
+          &:target {
+            display: var(--display);
+          }
+
+          & + .mgvView::before {
+            display: none;
+          }
+        }
+      }
+    </style>
   </head>
-  <body>
-    <h1>MGV Eintracht Oberbrechen</h1>
+  <body id="page" class="mgvPage">
+    <article class="mgvView" id="/">
+      <h1>MGV Eintracht Oberbrechen</h1>
+      <a href="#/imprint">Impressum</a>
+    </article>
+    <article class="mgvView" id="/imprint">
+      <a href="#/">Home</a>
+      <h1>Impressum</h1>
+    </article>
+    <script>
+      // @ts-check
+      const pageRef = /** @type {HTMLBodyElement} */ (document.getElementById('page'));
+      pageRef.classList.add('mgvPage--js');
+
+      /** @type {Object<string, HTMLElement>} */
+      const viewRefs = Array.from(document.querySelectorAll('.mgvView[id]')).reduce((dict, ref) => ({...dict, [ref.id]: ref}), {});
+      /** */
+      function onHashchange() {
+        const route = location.hash.slice(1);
+        if (!(route in viewRefs)) {
+          location.hash = Object.keys(viewRefs)[0];
+        }
+      }
+      if (Object.keys(viewRefs).length > 0) {
+        window.addEventListener('hashchange', onHashchange);
+        onHashchange();
+      }
+    </script>
   </body>
 </html>
