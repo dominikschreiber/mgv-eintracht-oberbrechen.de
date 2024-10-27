@@ -1,4 +1,8 @@
 .mgvNav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--mgv-gap);
   padding: var(--mgv-gap) var(--mgv-section-horizontal-padding);
   background-color: var(--mgv-section-background);
 }

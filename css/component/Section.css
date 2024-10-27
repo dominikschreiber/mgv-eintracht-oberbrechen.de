@@ -2,11 +2,13 @@
   --mgv-foreground: white;
   
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   padding: var(--mgv-section-padding-top) var(--mgv-section-horizontal-padding) var(--mgv-section-padding-bottom);
   height: var(--mgv-section-height, auto);
   background-image: linear-gradient(var(--mgv-section-background), var(--mgv-section-background)), var(--mgv-section-background-image, none);
   background-size: 100%, 130%;
-  color: var(--mgv-foreground);
+  color: var(--mgv-foreground, white);
   text-shadow: 0 0 .05em black, 0 0 .05em black, 0 0 .05em black, 0 0 .05em black;
 
   @supports (color: oklch(from red l c h)) {
