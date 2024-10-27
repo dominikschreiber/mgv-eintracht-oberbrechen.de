@@ -1,0 +1,5 @@
+.mgvText--h1,
+.mgvText--h2,
+.mgvText--h3 {
+  font-family: var(--mgv-header-font-family);
+}

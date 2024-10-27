@@ -1,0 +1,4 @@
+.mgvNav {
+  padding: var(--mgv-gap) var(--mgv-section-horizontal-padding);
+  background-color: var(--mgv-section-background);
+}

@@ -1,0 +1,36 @@
+.mgvSection {
+  box-sizing: border-box;
+  padding: var(--mgv-section-padding-top) var(--mgv-section-horizontal-padding) var(--mgv-section-padding-bottom);
+  height: var(--mgv-section-height, auto);
+  background-image: linear-gradient(var(--mgv-section-background), var(--mgv-section-background)), var(--mgv-section-background-image, none);
+  background-size: 100%, 130%;
+  color: white;
+  text-shadow: 0 0 .05em black, 0 0 .05em black, 0 0 .05em black, 0 0 .05em black;
+
+  @supports (color: oklch(from red l c h)) {
+    --l: clamp(0, (var(--l-threshold, .623) / l - 1) * infinity, 1);
+    color: oklch(from var(--mgv-section-background) var(--l) 0 h);
+    text-shadow: none;
+  }
+
+  @supports (color: color-contrast(red)) {
+    color: color-contrast(var(--mgv-section-background));
+    text-shadow: none;
+  }
+}
+
+.mgvSection--animated-background {
+  animation: mgv-section-background 20s ease-in-out infinite;
+}
+
+@keyframes mgv-section-background {
+  0%, 100% {
+    background-position: center, 40% 40%;
+  }
+  25%, 75% {
+    background-position: center, 60% 50%;
+  }
+  50% {
+    background-position: center, 50% 70%;
+  }
+}

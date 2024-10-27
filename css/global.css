@@ -1,0 +1,42 @@
+:root {
+  --mgv-blue: #13437d;
+  --mgv-grey: #8e9394;
+  --mgv-black: #050505;
+
+  --mgv-gap: 1rem;
+
+  --mgv-page-header-background: var(--mgv-section-background);
+  --mgv-page-footer-background: var(--mgv-blue);
+
+  --mgv-section-horizontal-padding: 1rem;
+  --mgv-section-padding-top: 1rem;
+  --mgv-section-padding-bottom: 1rem;
+  --mgv-section-background: #ffffff;
+
+  --mgv-header-font-family: Futura, sans-serif;
+
+  @media (min-width: 48rem) { /* 768px / small tablet */
+    --mgv-section-horizontal-padding: 2rem;
+    --mgv-section-padding-bottom: 2rem;
+  }
+
+  @media (min-width: 64rem) { /* 1024px / large tablet */
+    --mgv-section-horizontal-padding: 3rem;
+  }
+
+  @media (min-width: 75rem) { /* 1200px / desktop */
+    --mgv-section-horizontal-padding: 5rem;
+    --mgv-section-padding-top: 2rem;
+    --mgv-section-padding-bottom: 3rem;
+  }
+}
+
+html {
+  /*
+   * overscroll-behavior:auto seems to add the html background-image as it is
+   * before and after the document. Hence we have to "flip" the
+   * background-image to have the footer background color at the top and the
+   * header background image at the bottom.
+   */
+  background-image: linear-gradient(var(--mgv-page-footer-background) 50%, var(--mgv-page-header-background) 50%);
+}
