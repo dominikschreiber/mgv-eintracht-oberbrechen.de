@@ -3,3 +3,15 @@
 .mgvText--h3 {
   font-family: var(--mgv-header-font-family);
 }
+
+.mgvText--h1 {
+  font-size: var(--mgv-font-size-h1);
+}
+
+.mgvText--h2 {
+  font-size: var(--mgv-font-size-h2);
+}
+
+.mgvText--h3 {
+  font-size: var(--mgv-font-size-h3);
+}

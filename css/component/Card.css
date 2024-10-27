@@ -1,0 +1,5 @@
+.mgvCard {
+  padding: var(--mgv-gap);
+  border-radius: var(--mgv-border-radius);
+  border: 1px solid var(--mgv-foreground);
+}

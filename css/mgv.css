@@ -1,4 +1,7 @@
+@import url('./font.css');
 @import url('./global.css');
+@import url('./component/Card.css');
+@import url('./component/Grid.css');
 @import url('./component/Link.css');
 @import url('./component/Nav.css');
 @import url('./component/Page.css');

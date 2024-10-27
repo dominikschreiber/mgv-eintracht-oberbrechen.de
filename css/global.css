@@ -3,7 +3,17 @@
   --mgv-grey: #8e9394;
   --mgv-black: #050505;
 
+  --mgv-foreground: var(--mgv-black);
+
   --mgv-gap: 1rem;
+  --mgv-border-radius: .5rem;
+
+  --mgv-font-family: 'Josefin sans', sans-serif;
+  --mgv-header-font-family: var(--mgv-font-family);
+
+  --mgv-font-size-h1: 3rem;
+  --mgv-font-size-h2: 1.5rem;
+  --mgv-font-size-h3: 1.25rem;
 
   --mgv-page-header-background: var(--mgv-section-background);
   --mgv-page-footer-background: var(--mgv-blue);
@@ -12,8 +22,6 @@
   --mgv-section-padding-top: 1rem;
   --mgv-section-padding-bottom: 1rem;
   --mgv-section-background: #ffffff;
-
-  --mgv-header-font-family: Futura, sans-serif;
 
   @media (min-width: 48rem) { /* 768px / small tablet */
     --mgv-section-horizontal-padding: 2rem;
@@ -39,4 +47,5 @@ html {
    * header background image at the bottom.
    */
   background-image: linear-gradient(var(--mgv-page-footer-background) 50%, var(--mgv-page-header-background) 50%);
+  font-family: var(--mgv-font-family);
 }
