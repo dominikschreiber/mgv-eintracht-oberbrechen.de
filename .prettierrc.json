@@ -1,0 +1,12 @@
+{
+	"experimentalTernaries": true,
+	"arrowParens": "avoid",
+	"bracketSameLine": true,
+	"bracketSpacing": false,
+	"htmlWhitespaceSensitivity": "ignore",
+	"semi": true,
+	"singleQuote": true,
+	"quoteProps": "as-needed",
+	"trailingComma": "none",
+	"objectWrap": "collapse"
+}
