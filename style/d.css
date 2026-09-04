@@ -1,0 +1,4 @@
+/** @fileoverview display */
+.d-grid {
+	display: grid;
+}

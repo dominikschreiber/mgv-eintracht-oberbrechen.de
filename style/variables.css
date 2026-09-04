@@ -1,0 +1,114 @@
+@property --percentage-contrast-mix-fg {
+	syntax: '<percentage>';
+	inherits: true;
+	initial-value: 0%;
+}
+@property --color-bg {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: red;
+}
+@property --color-fg {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: red;
+}
+@property --color-primary-bg {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: red;
+}
+@property --color-primary-fg {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: red;
+}
+
+:root {
+	color-scheme: light dark;
+
+	--dimension: 0.0625rem;
+	--dimension-xxs: var(--dimension);
+	--dimension-xs: calc(var(--dimension) * 2);
+	--dimension-s: calc(var(--dimension) * 4);
+	--dimension-m: calc(var(--dimension) * 8);
+	--dimension-l: calc(var(--dimension) * 16);
+	--dimension-xl: calc(var(--dimension) * 32);
+	--dimension-xxl: calc(var(--dimension) * 64);
+
+	--number-phi: 1.6180339887;
+
+	--number-l-1: 0.12;
+	--number-l-2: 0.2;
+	--number-l-3: 0.25;
+	--number-l-4: 0.3;
+	--number-l-5: 0.35;
+	--number-l-6: 0.4;
+	--number-l-7: 0.45;
+	--number-l-8: 0.5;
+	--number-l-9: 0.55;
+	--number-l-10: 0.6;
+	--number-l-11: 0.65;
+	--number-l-12: 0.75;
+	--number-l-13: 0.9;
+
+	--number-c-1: 0.02;
+	--number-c-2: 0.05;
+	--number-c-3: 0.1;
+	--number-c-4: 0.15;
+	--number-c-5: 0.12;
+	--number-c-6: 0.18;
+	--number-c-7: 0.15;
+	--number-c-8: 0.2;
+	--number-c-9: 0.18;
+	--number-c-10: 0.12;
+	--number-c-11: 0.08;
+	--number-c-12: 0.05;
+	--number-c-13: 0.02;
+
+	--percentage-contrast-mix-fg: calc(100% / var(--number-phi));
+
+	--color-primary: #114283;
+	--color-primary-1: oklch(from var(--color-primary) var(--number-l-1) var(--number-c-1) h);
+	--color-primary-2: oklch(from var(--color-primary) var(--number-l-2) var(--number-c-2) h);
+	--color-primary-3: oklch(from var(--color-primary) var(--number-l-3) var(--number-c-3) h);
+	--color-primary-4: oklch(from var(--color-primary) var(--number-l-4) var(--number-c-4) h);
+	--color-primary-5: oklch(from var(--color-primary) var(--number-l-5) var(--number-c-5) h);
+	--color-primary-6: oklch(from var(--color-primary) var(--number-l-6) var(--number-c-6) h);
+	--color-primary-7: oklch(from var(--color-primary) var(--number-l-7) var(--number-c-7) h);
+	--color-primary-8: oklch(from var(--color-primary) var(--number-l-8) var(--number-c-8) h);
+	--color-primary-9: oklch(from var(--color-primary) var(--number-l-9) var(--number-c-9) h);
+	--color-primary-10: oklch(from var(--color-primary) var(--number-l-10) var(--number-c-10) h);
+	--color-primary-11: oklch(from var(--color-primary) var(--number-l-11) var(--number-c-11) h);
+	--color-primary-12: oklch(from var(--color-primary) var(--number-l-12) var(--number-c-12) h);
+	--color-primary-13: oklch(from var(--color-primary) var(--number-l-13) var(--number-c-13) h);
+
+	--color-neutral: #8f9394;
+	--color-neutral-1: oklch(from var(--color-neutral) var(--number-l-1) var(--number-c-1) h);
+	--color-neutral-2: oklch(from var(--color-neutral) var(--number-l-2) var(--number-c-2) h);
+	--color-neutral-3: oklch(from var(--color-neutral) var(--number-l-3) var(--number-c-3) h);
+	--color-neutral-4: oklch(from var(--color-neutral) var(--number-l-4) var(--number-c-4) h);
+	--color-neutral-5: oklch(from var(--color-neutral) var(--number-l-5) var(--number-c-5) h);
+	--color-neutral-6: oklch(from var(--color-neutral) var(--number-l-6) var(--number-c-6) h);
+	--color-neutral-7: oklch(from var(--color-neutral) var(--number-l-7) var(--number-c-7) h);
+	--color-neutral-8: oklch(from var(--color-neutral) var(--number-l-8) var(--number-c-8) h);
+	--color-neutral-9: oklch(from var(--color-neutral) var(--number-l-9) var(--number-c-9) h);
+	--color-neutral-10: oklch(from var(--color-neutral) var(--number-l-10) var(--number-c-10) h);
+	--color-neutral-11: oklch(from var(--color-neutral) var(--number-l-11) var(--number-c-11) h);
+	--color-neutral-12: oklch(from var(--color-neutral) var(--number-l-12) var(--number-c-12) h);
+	--color-neutral-13: oklch(from var(--color-neutral) var(--number-l-13) var(--number-c-13) h);
+
+	--color-bg: light-dark(var(--color-neutral-13), var(--color-neutral-1));
+	--color-fg: color-mix(
+		in oklch,
+		contrast-color(var(--color-bg)) calc(100% - var(--percentage-contrast-mix-fg)),
+		var(--color-bg) var(--percentage-contrast-mix-fg)
+	);
+
+	--color-primary-bg: light-dark(var(--color-primary-13), var(--color-primary-1));
+	--color-primary-fg: color-mix(
+		in oklch,
+		contrast-color(var(--color-primary-bg)) calc(100% - var(--percentage-contrast-mix-fg)),
+		var(--color-primary-bg) var(--percentage-contrast-mix-fg)
+	);
+}

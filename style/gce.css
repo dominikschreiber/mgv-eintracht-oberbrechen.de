@@ -1,0 +1,154 @@
+/** @fileoverview grid-column-end */
+.gce-1 {
+	grid-column-end: span 1;
+}
+.gce-2 {
+	grid-column-end: span 2;
+}
+.gce-3 {
+	grid-column-end: span 3;
+}
+.gce-4 {
+	grid-column-end: span 4;
+}
+.gce-5 {
+	grid-column-end: span 5;
+}
+.gce-6 {
+	grid-column-end: span 6;
+}
+.gce-7 {
+	grid-column-end: span 7;
+}
+.gce-8 {
+	grid-column-end: span 8;
+}
+.gce-9 {
+	grid-column-end: span 9;
+}
+.gce-10 {
+	grid-column-end: span 10;
+}
+.gce-11 {
+	grid-column-end: span 11;
+}
+.gce-12 {
+	grid-column-end: span 12;
+}
+
+@media (min-width: 768px) {
+	.m\:gce-1 {
+		grid-column-end: span 1;
+	}
+	.m\:gce-2 {
+		grid-column-end: span 2;
+	}
+	.m\:gce-3 {
+		grid-column-end: span 3;
+	}
+	.m\:gce-4 {
+		grid-column-end: span 4;
+	}
+	.m\:gce-5 {
+		grid-column-end: span 5;
+	}
+	.m\:gce-6 {
+		grid-column-end: span 6;
+	}
+	.m\:gce-7 {
+		grid-column-end: span 7;
+	}
+	.m\:gce-8 {
+		grid-column-end: span 8;
+	}
+	.m\:gce-9 {
+		grid-column-end: span 9;
+	}
+	.m\:gce-10 {
+		grid-column-end: span 10;
+	}
+	.m\:gce-11 {
+		grid-column-end: span 11;
+	}
+	.m\:gce-12 {
+		grid-column-end: span 12;
+	}
+}
+
+@media (min-width: 1024px) {
+	.l\:gce-1 {
+		grid-column-end: span 1;
+	}
+	.l\:gce-2 {
+		grid-column-end: span 2;
+	}
+	.l\:gce-3 {
+		grid-column-end: span 3;
+	}
+	.l\:gce-4 {
+		grid-column-end: span 4;
+	}
+	.l\:gce-5 {
+		grid-column-end: span 5;
+	}
+	.l\:gce-6 {
+		grid-column-end: span 6;
+	}
+	.l\:gce-7 {
+		grid-column-end: span 7;
+	}
+	.l\:gce-8 {
+		grid-column-end: span 8;
+	}
+	.l\:gce-9 {
+		grid-column-end: span 9;
+	}
+	.l\:gce-10 {
+		grid-column-end: span 10;
+	}
+	.l\:gce-11 {
+		grid-column-end: span 11;
+	}
+	.l\:gce-12 {
+		grid-column-end: span 12;
+	}
+}
+
+@media (min-width: 1280px) {
+	.xl\:gce-1 {
+		grid-column-end: span 1;
+	}
+	.xl\:gce-2 {
+		grid-column-end: span 2;
+	}
+	.xl\:gce-3 {
+		grid-column-end: span 3;
+	}
+	.xl\:gce-4 {
+		grid-column-end: span 4;
+	}
+	.xl\:gce-5 {
+		grid-column-end: span 5;
+	}
+	.xl\:gce-6 {
+		grid-column-end: span 6;
+	}
+	.xl\:gce-7 {
+		grid-column-end: span 7;
+	}
+	.xl\:gce-8 {
+		grid-column-end: span 8;
+	}
+	.xl\:gce-9 {
+		grid-column-end: span 9;
+	}
+	.xl\:gce-10 {
+		grid-column-end: span 10;
+	}
+	.xl\:gce-11 {
+		grid-column-end: span 11;
+	}
+	.xl\:gce-12 {
+		grid-column-end: span 12;
+	}
+}

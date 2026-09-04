@@ -1,0 +1,151 @@
+/** @fileoverview grid-template-columns */
+.gtc-1 {
+	grid-template-columns: repeat(1, 1fr);
+}
+.gtc-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+.gtc-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+.gtc-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+.gtc-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+.gtc-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+.gtc-7 {
+	grid-template-columns: repeat(7, 1fr);
+}
+.gtc-8 {
+	grid-template-columns: repeat(8, 1fr);
+}
+.gtc-9 {
+	grid-template-columns: repeat(9, 1fr);
+}
+.gtc-10 {
+	grid-template-columns: repeat(10, 1fr);
+}
+.gtc-11 {
+	grid-template-columns: repeat(11, 1fr);
+}
+.gtc-12 {
+	grid-template-columns: repeat(12, 1fr);
+}
+@media (min-width: 768px) {
+	.m\:gtc-1 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.m\:gtc-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.m\:gtc-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.m\:gtc-4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.m\:gtc-5 {
+		grid-template-columns: repeat(5, 1fr);
+	}
+	.m\:gtc-6 {
+		grid-template-columns: repeat(6, 1fr);
+	}
+	.m\:gtc-7 {
+		grid-template-columns: repeat(7, 1fr);
+	}
+	.m\:gtc-8 {
+		grid-template-columns: repeat(8, 1fr);
+	}
+	.m\:gtc-9 {
+		grid-template-columns: repeat(9, 1fr);
+	}
+	.m\:gtc-10 {
+		grid-template-columns: repeat(10, 1fr);
+	}
+	.m\:gtc-11 {
+		grid-template-columns: repeat(11, 1fr);
+	}
+	.m\:gtc-12 {
+		grid-template-columns: repeat(12, 1fr);
+	}
+}
+@media (min-width: 1024px) {
+	.l\:gtc-1 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.l\:gtc-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.l\:gtc-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.l\:gtc-4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.l\:gtc-5 {
+		grid-template-columns: repeat(5, 1fr);
+	}
+	.l\:gtc-6 {
+		grid-template-columns: repeat(6, 1fr);
+	}
+	.l\:gtc-7 {
+		grid-template-columns: repeat(7, 1fr);
+	}
+	.l\:gtc-8 {
+		grid-template-columns: repeat(8, 1fr);
+	}
+	.l\:gtc-9 {
+		grid-template-columns: repeat(9, 1fr);
+	}
+	.l\:gtc-10 {
+		grid-template-columns: repeat(10, 1fr);
+	}
+	.l\:gtc-11 {
+		grid-template-columns: repeat(11, 1fr);
+	}
+	.l\:gtc-12 {
+		grid-template-columns: repeat(12, 1fr);
+	}
+}
+@media (min-width: 1280px) {
+	.xl\:gtc-1 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.xl\:gtc-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.xl\:gtc-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.xl\:gtc-4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.xl\:gtc-5 {
+		grid-template-columns: repeat(5, 1fr);
+	}
+	.xl\:gtc-6 {
+		grid-template-columns: repeat(6, 1fr);
+	}
+	.xl\:gtc-7 {
+		grid-template-columns: repeat(7, 1fr);
+	}
+	.xl\:gtc-8 {
+		grid-template-columns: repeat(8, 1fr);
+	}
+	.xl\:gtc-9 {
+		grid-template-columns: repeat(9, 1fr);
+	}
+	.xl\:gtc-10 {
+		grid-template-columns: repeat(10, 1fr);
+	}
+	.xl\:gtc-11 {
+		grid-template-columns: repeat(11, 1fr);
+	}
+	.xl\:gtc-12 {
+		grid-template-columns: repeat(12, 1fr);
+	}
+}

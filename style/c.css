@@ -1,0 +1,6 @@
+.c-fg {
+	color: var(--color-fg);
+}
+.c-primary-fg {
+	color: var(--color-primary-fg);
+}

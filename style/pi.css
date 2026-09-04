@@ -1,0 +1,67 @@
+/** @fileoverview padding-inline */
+.pi-s {
+	padding-inline: var(--dimension-s);
+}
+.pi-m {
+	padding-inline: var(--dimension-m);
+}
+.pi-l {
+	padding-inline: var(--dimension-l);
+}
+.pi-xl {
+	padding-inline: var(--dimension-xl);
+}
+.pi-xxl {
+	padding-inline: var(--dimension-xxl);
+}
+@media (min-width: 768px) {
+	.m\:pi-s {
+		padding-inline: var(--dimension-s);
+	}
+	.m\:pi-m {
+		padding-inline: var(--dimension-m);
+	}
+	.m\:pi-l {
+		padding-inline: var(--dimension-l);
+	}
+	.m\:pi-xl {
+		padding-inline: var(--dimension-xl);
+	}
+	.m\:pi-xxl {
+		padding-inline: var(--dimension-xxl);
+	}
+}
+@media (min-width: 1024px) {
+	.l\:pi-s {
+		padding-inline: var(--dimension-s);
+	}
+	.l\:pi-m {
+		padding-inline: var(--dimension-m);
+	}
+	.l\:pi-l {
+		padding-inline: var(--dimension-l);
+	}
+	.l\:pi-xl {
+		padding-inline: var(--dimension-xl);
+	}
+	.l\:pi-xxl {
+		padding-inline: var(--dimension-xxl);
+	}
+}
+@media (min-width: 1280px) {
+	.xl\:pi-s {
+		padding-inline: var(--dimension-s);
+	}
+	.xl\:pi-m {
+		padding-inline: var(--dimension-m);
+	}
+	.xl\:pi-l {
+		padding-inline: var(--dimension-l);
+	}
+	.xl\:pi-xl {
+		padding-inline: var(--dimension-xl);
+	}
+	.xl\:pi-xxl {
+		padding-inline: var(--dimension-xxl);
+	}
+}

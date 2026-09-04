@@ -1,0 +1,68 @@
+/** @fileoverview padding-block */
+.pb-s {
+	padding-block: var(--dimension-s);
+}
+.pb-m {
+	padding-block: var(--dimension-m);
+}
+.pb-l {
+	padding-block: var(--dimension-l);
+}
+.pb-xl {
+	padding-block: var(--dimension-xl);
+}
+.pb-xxl {
+	padding-block: var(--dimension-xxl);
+}
+
+@media (min-width: 768px) {
+	.m\:pb-s {
+		padding-block: var(--dimension-s);
+	}
+	.m\:pb-m {
+		padding-block: var(--dimension-m);
+	}
+	.m\:pb-l {
+		padding-block: var(--dimension-l);
+	}
+	.m\:pb-xl {
+		padding-block: var(--dimension-xl);
+	}
+	.m\:pb-xxl {
+		padding-block: var(--dimension-xxl);
+	}
+}
+@media (min-width: 1024px) {
+	.l\:pb-s {
+		padding-block: var(--dimension-s);
+	}
+	.l\:pb-m {
+		padding-block: var(--dimension-m);
+	}
+	.l\:pb-l {
+		padding-block: var(--dimension-l);
+	}
+	.l\:pb-xl {
+		padding-block: var(--dimension-xl);
+	}
+	.l\:pb-xxl {
+		padding-block: var(--dimension-xxl);
+	}
+}
+@media (min-width: 1280px) {
+	.xl\:pb-s {
+		padding-block: var(--dimension-s);
+	}
+	.xl\:pb-m {
+		padding-block: var(--dimension-m);
+	}
+	.xl\:pb-l {
+		padding-block: var(--dimension-l);
+	}
+	.xl\:pb-xl {
+		padding-block: var(--dimension-xl);
+	}
+	.xl\:pb-xxl {
+		padding-block: var(--dimension-xxl);
+	}
+}
