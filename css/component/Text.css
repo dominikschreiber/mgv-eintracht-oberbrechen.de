@@ -15,3 +15,8 @@
 .mgvText--h3 {
   font-size: var(--mgv-font-size-h3);
 }
+
+.mgvText--p {
+  line-height: 1.5;
+  max-width: 60ch;
+}

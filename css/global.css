@@ -8,6 +8,9 @@
   --mgv-gap: 1rem;
   --mgv-border-radius: .5rem;
 
+  --mgv-fast: .068s;
+  --mgv-slow: 1.618s;
+
   --mgv-font-family: 'Josefin sans', sans-serif;
   --mgv-header-font-family: var(--mgv-font-family);
 
@@ -16,7 +19,7 @@
   --mgv-font-size-h3: 1.25rem;
 
   --mgv-page-header-background: var(--mgv-section-background);
-  --mgv-page-footer-background: var(--mgv-blue);
+  --mgv-page-footer-background: var(--mgv-grey);
 
   --mgv-section-horizontal-padding: 1rem;
   --mgv-section-padding-top: 1rem;
