@@ -1,0 +1,7 @@
+/** @fileoverview flex-direction */
+.fd-row {
+	flex-direction: row;
+}
+.fd-col {
+	flex-direction: column;
+}

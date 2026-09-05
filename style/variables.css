@@ -117,4 +117,10 @@
 		var(--color-primary) calc(100% - var(--percentage-contrast-mix-fg)),
 		contrast-color(var(--color-primary)) var(--percentage-contrast-mix-fg)
 	);
+
+	--color-neutral-fg-bg: color-mix(
+		in oklch,
+		var(--color-neutral) calc(100% - var(--percentage-contrast-mix-fg)),
+		contrast-color(var(--color-neutral)) var(--percentage-contrast-mix-fg)
+	);
 }

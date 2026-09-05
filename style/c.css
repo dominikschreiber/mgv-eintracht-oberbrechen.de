@@ -1,10 +1,21 @@
 /** @fileoverview color */
-.c-on-bg {
+.c-on-bg,
+.hover\:c-on-bg:hover,
+.active\:c-on-bg:active {
 	color: var(--color-on-bg);
 }
-.c-on-primary-bg {
+.c-on-primary-bg,
+.hover\:c-on-primary-bg:hover,
+.active\:c-on-primary-bg:active {
 	color: var(--color-on-primary-bg);
 }
-.c-primary {
+.c-primary,
+.hover\:c-primary:hover,
+.active\:c-primary:active {
 	color: var(--color-primary);
+}
+.c-neutral,
+.hover\:c-neutral:hover,
+.active\:c-neutral:active {
+	color: var(--color-neutral);
 }

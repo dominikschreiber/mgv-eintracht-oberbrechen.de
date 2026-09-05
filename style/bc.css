@@ -1,9 +1,20 @@
-.bc-bg {
+.bc-bg,
+.hover\:bg-bg:hover,
+.active\:bg-bg:active {
 	background-color: var(--color-bg);
 }
-.bc-primary-bg {
+.bc-primary-bg,
+.hover\:bg-primary-bg:hover,
+.active\:bg-primary-bg:active {
 	background-color: var(--color-primary-bg);
 }
-.bc-primary-fg-bg {
+.bc-primary-fg-bg,
+.hover\:bg-primary-fg-bg:hover,
+.active\:bg-primary-fg-bg:active {
 	background-color: var(--color-primary-fg-bg);
+}
+.bc-neutral-fg-bg,
+.hover\:bg-neutral-fg-bg:hover,
+.active\:bg-neutral-fg-bg:active {
+	background-color: var(--color-neutral-fg-bg);
 }
