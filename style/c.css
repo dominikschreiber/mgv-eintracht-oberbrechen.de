@@ -1,6 +1,10 @@
-.c-fg {
-	color: var(--color-fg);
+/** @fileoverview color */
+.c-on-bg {
+	color: var(--color-on-bg);
 }
-.c-primary-fg {
-	color: var(--color-primary-fg);
+.c-on-primary-bg {
+	color: var(--color-on-primary-bg);
+}
+.c-primary {
+	color: var(--color-primary);
 }

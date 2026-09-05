@@ -4,3 +4,6 @@
 .bc-primary-bg {
 	background-color: var(--color-primary-bg);
 }
+.bc-primary-fg-bg {
+	background-color: var(--color-primary-fg-bg);
+}
